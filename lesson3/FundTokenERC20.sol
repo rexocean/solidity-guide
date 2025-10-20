@@ -23,6 +23,9 @@ contract FundTokenERC20 is ERC20 {
         fundMe.setFunderToAmount(msg.sender, fundMe.fundersToAmount(msg.sender) - amountToMint);
     }
 
+    // transfer用父合约
+
+    // 提取/使用/兑换（用户领取的是ERC20的Token），使用完业务逻辑之后，需要burn掉当前账户
     function claim(uint256 amountToClaim) public {
         // complete cliam
         require(balanceOf(msg.sender) >= amountToClaim, "You dont have enough ERC20 tokens");
