@@ -1,6 +1,9 @@
 const DECIMAL = 8
 const INITIAL_ANSWER=300000000000
 const developmentChains = ["hardhat","local"]
+const LOCK_TIME = 180
+const CONFIRMATIONS = 1
+
 
 const networkConfig = {
     // SEPOLIA_CHAINID
@@ -9,7 +12,7 @@ const networkConfig = {
     },
     // BNB-CHAINID
     97:{
-        ethUsdDataFeed: "0xxxxxxxxx"
+        ethUsdDataFeed: "0x143db3CEEfbdfe5631aDD3E50f7614B6ba708BA7"
     }
 }
 
@@ -19,8 +22,19 @@ const networkConfig = {
 //   INITIAL_ANSWER
 // }
 
-export default {
+// export default {
+//     DECIMAL,
+//     INITIAL_ANSWER,
+//     developmentChains,
+//     networkConfig,
+//     LOCK_TIME
+// }
+
+module.exports = {
     DECIMAL,
     INITIAL_ANSWER,
-    developmentChains
+    developmentChains,
+    networkConfig,
+    LOCK_TIME,
+    CONFIRMATIONS
 }
